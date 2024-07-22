@@ -1,0 +1,44 @@
+# This .gitignore file applies to all subfolders containing Unity projects
+
+# Ignore all user-specific Unity files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+# Ignore asset meta data
+#*.meta
+
+# Uncomment this line if you have a large number of files and need to exclude meta files
+# that are not referenced by any assets (this can speed up git status, add, etc.)
+#*~.unity
+#*~.prefab
+#*~.fbx
+#*~.asset
+
+# Ignore auto-generated VS/MD/Consulo solution and project files
+ExportedObj/
+.consulo/
+.vscode/
+.idea/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# Ignore Unity3D generated file on crash reports
+sysinfo.txt
+
+# Add additional rules here if needed
