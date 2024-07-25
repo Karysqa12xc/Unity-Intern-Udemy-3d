@@ -44,6 +44,71 @@ Section 3: Project Boost
 	Movement Factor: Di chuyển vật thể từ vị trí hiện tại của vật thể đến một vị trí chỉ định rồi
 	từ vị trí đó di chuyểnn người lại vị trí ban đầu
 	Dùng Application.Quit(): để thoát ứng dụng
+Section 4: Argom Assault
+	Game design: Player di chuyển spaceship theo chiều ngang và dọc, spaceship sẽ có chức năng bắn
+	đạn. Camera di chuyển theo rail/path. Các enemies có thể bắn đạn để tấn công người chơi, 
+	Enemie di chuyển hoặc đứng yên. Mỗi khi tiêu diệt Enemy người chơi sẽ được cộng điểm. Khi người
+	chơi bị tiêu diệt thì sẽ quay trở lại điểm bắt đầu và lấy số điểm ao nhất của người hơi
+	Terraim: 
+		Plain Terrain: 
+			Raise of lower terrain tạo vùng địa hình 
+			Set height: Sử dụng chủ yếu để xoá địa hình
+	Package Terrain Tool bao gồm những chức năng
+		Sculpt/Bright: Tạo cầu(chỉ định điểm A bằng cách giữ nút ctrl và click chuột vào 
+		một điểm khác để tạo cầu. Lưu ý địa hình phải không bằng phẳng
+		Sculpt/Clone: Tạo bản sao của một địa hình khác
+		Erosion/Wind: Mô phỏng gió thổi qua địa hình 
+		Smooth Height: Làm mịn địa hình
+		Transform/Pinch: Chỉnh sửa vùng địa hình theo chiều hướng lên
+		Transform/Smudge: Chỉnh sửa vùng địa hình theo chiều hướng xuống
+		Transform/Twist: Chỉnh sửa vùng địa hình theo vòng xoắn
+		Paint Holes: Tạo khoảng chống giữa các vùng địa hình
+		Sử dụng A: để tăng strength của brush
+		Sử dụng D: để thay đổi góc xoay của brush 
+		Sử dụng S: đê thay đổi size của brush
+	Sử dụng Asset Store để tải các tài nguyên có sẵn
+	Texturing Terrain
+		Bump Map: Kết cấu về thông tin của ánh sáng bắt môt hình dạng mà có thể làm cho 
+		bản đồ 2D giống với bản đồ 3D
+		Height Map: hình ảnh hiển thị dưới dạng trắng đen dùng để mô tả chiều cao của 
+		địa hình
+		Normal map: Sử dụng hệ màu RGB để hiện thị hướng của ánh sáng được khắc hoạ(độ phủ
+		bóng của địa hình) 
+	Thêm Trees vào Terrain
+	Sử dụng Timeline để điều khiển nhiều Animation
+	Align with view: Lựa chọn vị trí và góc xoay của scene cho camera
+	Sử dụng Curves trong Timeline để chỉnh góc xoay, toạ độ dễ dàng hơn
+	Sử dụng Input System để tạo khả năng điều khiển cho nhiều hệ máy
+	Mathf.Clamp(): Giới hạn vùng di chuyển của vật thể trong scene
+	Header Attribute: dùng để nhóm các thuộc tính
+	Tooltip Attribute: Dùng để mô tả thuộc tính khi blur vào thuộc tính trong cửa sổ inspector
+	Collision cho ParticleSystem: Sử dụng hàm OnParticleCollision() để làm tạo va chạm cho ParicleSystem
+	Sử dụng GameObject.FindWithTag(): để tìm GameObject theo tag
+	Sử dụng Control Back để gom cụm animation để thành một đoạn để lồng vào đoạn khác
+	Singleton Pattern: Tạo một đối tượng duy nhất trong game tồn tại ở tất cả các scene, thường được dùng để quản lý âm
+	thanh
+	SkyBox/6 slice: gộp các texture lại với nhau để tạo skybox
+		Exposure: tạo độ sáng
+		Rotation: Xoay Skybox
+	Lighting => Enviroment => Other Settings => Fog: để tạo sương mù cho trò chơi
+	Post-Processing: Thêm hiệu ứng cho camera để thay đổi góc nhìn trong Game
+Section 5: Realm Rush
+	Game Design: Kiểu game thủ thành người chơi có thể đặt các các cấu trúc phòng thủ và tiêu diệt các enemies trong các lượt
+	tấn công.
+	Sử dụng Attribute ExecuteAlways để script luôn chạy ở chế độ Editor và chế độ Play
+	InvokeRepeating(): Dùng để lặp lại một hàm với thời gian nhất định trong đó có 3 tham số là chuỗi tên hàm, thời gian trễ khi
+	lặp, thời gian lặp lại
+	Prefab Variant: là một biến thể được xác định của các prefabs có sẵn giúp thay đổi các biến thể từ bản gốc. Ví dụ 
+	ta có một prefabs màu đỏ khi ta tạo Prefab Variant thì ta có thể sửa đổi và thay đổi prefabs đó mà không ảnh hưởng đến
+	bản gốc và ngược lại nếu ta thay đổi ở bản gốc thì các bản sao cũng sẽ được thay đổi theo
+	
+
+	
+
+	
+	
+	
+	
 
 
 	
