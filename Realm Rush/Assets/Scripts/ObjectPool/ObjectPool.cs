@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
@@ -8,7 +6,7 @@ public class ObjectPool : MonoBehaviour
     [SerializeField]
     GameObject enemyPrefabs;
     [SerializeField]
-    [Range(1, 50)]int poolSize = 5;
+    [Range(0, 50)]int poolSize = 5;
     [SerializeField]
     [Range(0.1f, 30f)]float spawnTimer;
     GameObject[] pools;

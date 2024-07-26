@@ -82,7 +82,8 @@ Section 4: Argom Assault
 	Mathf.Clamp(): Giới hạn vùng di chuyển của vật thể trong scene
 	Header Attribute: dùng để nhóm các thuộc tính
 	Tooltip Attribute: Dùng để mô tả thuộc tính khi blur vào thuộc tính trong cửa sổ inspector
-	Collision cho ParticleSystem: Sử dụng hàm OnParticleCollision() để làm tạo va chạm cho ParicleSystem
+	Collision cho ParticleSystem: Sử dụng hàm OnParticleCollision() để làm tạo va chạm cho ParicleSystem(lưu 
+	ý khi dùng phải bật Send Collision Messages)
 	Sử dụng GameObject.FindWithTag(): để tìm GameObject theo tag
 	Sử dụng Control Back để gom cụm animation để thành một đoạn để lồng vào đoạn khác
 	Singleton Pattern: Tạo một đối tượng duy nhất trong game tồn tại ở tất cả các scene, thường được dùng để quản lý âm
@@ -91,7 +92,7 @@ Section 4: Argom Assault
 		Exposure: tạo độ sáng
 		Rotation: Xoay Skybox
 	Lighting => Enviroment => Other Settings => Fog: để tạo sương mù cho trò chơi
-	Post-Processing: Thêm hiệu ứng cho camera để thay đổi góc nhìn trong Game
+	Post-Processing: Thêm hiệu ứng cho camera để thay đổi góc nhìn trong Game(gồm Process Profile, Process Layer, Process Volume)
 Section 5: Realm Rush
 	Game Design: Kiểu game thủ thành người chơi có thể đặt các các cấu trúc phòng thủ và tiêu diệt các enemies trong các lượt
 	tấn công.
@@ -101,7 +102,36 @@ Section 5: Realm Rush
 	Prefab Variant: là một biến thể được xác định của các prefabs có sẵn giúp thay đổi các biến thể từ bản gốc. Ví dụ 
 	ta có một prefabs màu đỏ khi ta tạo Prefab Variant thì ta có thể sửa đổi và thay đổi prefabs đó mà không ảnh hưởng đến
 	bản gốc và ngược lại nếu ta thay đổi ở bản gốc thì các bản sao cũng sẽ được thay đổi theo
-	
+	Vector3.Lerp: Đi từ điểm A đến điểm B với tốc độ tăng dần
+	WaitForEndOfFrame(): Thời gian đợi cho khung được kết thúc
+	Trong Particle System: tắt shape để tất cả các vật chỉ được render ra một đường thẳng
+	ObjectPool: Quản lý việc sinh ra đối tượng mà có thể tận dụng lại những đối tượng đã dùng, đối tượng đã dùng xong sẽ được
+	ẩn đi chứ không bị Destroy tránh làm lãng phí tài nguyên.
+	Xây dựng hệ thống tiền tệ: Tạo một lớp Bank để quán lý tiền => Lớp Enemy liên kết với Bank và gọi lại các hàm của Bank, 
+	check Eneny Die thì cộng tiền
+	Sử dụng Text Mesh Pro để tạo được kiểu chữ đẹp hơn sơ với TextMesh thông thường vì TextMesh Classic được tạo bằng các Bitmap 
+	nên khi phóng to sẽ bị mờ.
+	Search Algorithms Overview:
+		Breadth First Search: Luôn trả về đường đi ngắn nhất, có thể có nhiều điểm đầu và điểm đích, 
+		tốc độ ở mức trung binh
+			Duyệt các node trong đường đi theo các chiều các nhau(lên, xuống, trái, phải) để tìm đường đi
+		Dijkstra: Luôn trả về đường đi ngắn nhất, Tiết kiệm chi phí di chuyển,có thể có nhiều điểm đầu và điểm dích, 
+		tốc độ thuật toán ở mức chậm
+		A*: Có lúc trả về đường đi ngắn nhất có lúc không, Tiết kiệm chi phí di chuyển, có thể có nhiều điểm đầu và điểm 
+		đích, tốc độ thuật toán ở mức nhanh(nhưng trong trường hợp xấu nhất thuật toán này cũng có tốc độ ngang với
+		thuật toán Dijkstra)
+	Sử dụng System.Serializable Attribute để hiển thị Class thuần trong Inspector 
+	Dictionary: 
+		Kiểu cấu trúc dữ liệu lưu theo dạng cặp key-values
+		Mỗi Keys sẽ quản lý một Values riêng
+		Keys phải là duy nhất(không được trùng nhau) và phải thật đơn giản
+		Values có thể là nhiều kiểu dữ liệu
+		Values có thể null
+		Keys không được null
+		Việc truy xuất từ Keys đến Values là rất nhanh ngược lại thì rất chậm
+	BroadcastMessage: Chuyền một tên hàm vào điều này giúp cho hàm BroadcastMessage này thực hiện chức năng gọi tất cả các 
+	method có tên được truyền vào BroadcastMessage trong các class kế thức MonoBehavior
+	Vào Project Settings -> Script Execution Order: để sắp xếp tập lệnh
 
 	
 
