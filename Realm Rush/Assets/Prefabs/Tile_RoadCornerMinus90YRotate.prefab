@@ -25,7 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7483748991463985922, guid: 831a67f7ba0a1904c871273239bed484, type: 3}
       propertyPath: m_Name
-      value: Tile_RoadCornerMinus90Y
+      value: Tile_RoadCornerMinus90YRotate
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483748991463985922, guid: 831a67f7ba0a1904c871273239bed484, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7483748991463985933, guid: 831a67f7ba0a1904c871273239bed484, type: 3}
       propertyPath: m_RootOrder
@@ -70,6 +74,10 @@ PrefabInstance:
     - target: {fileID: 7483748991463985933, guid: 831a67f7ba0a1904c871273239bed484, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7483748992111653679, guid: 831a67f7ba0a1904c871273239bed484, type: 3}
+      propertyPath: m_text
+      value: 2, 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 831a67f7ba0a1904c871273239bed484, type: 3}

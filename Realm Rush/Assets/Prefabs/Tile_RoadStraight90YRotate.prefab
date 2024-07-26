@@ -23,9 +23,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 5617224550966252508, guid: 27aca167fedf40b468953d9ad25bc155, type: 3}
+      propertyPath: m_text
+      value: 0, 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5617224551379563505, guid: 27aca167fedf40b468953d9ad25bc155, type: 3}
       propertyPath: m_Name
-      value: Tile_RoadStraight90
+      value: Tile_RoadStraight90YRotate
+      objectReference: {fileID: 0}
+    - target: {fileID: 5617224551379563505, guid: 27aca167fedf40b468953d9ad25bc155, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 5617224551379563518, guid: 27aca167fedf40b468953d9ad25bc155, type: 3}
       propertyPath: m_RootOrder

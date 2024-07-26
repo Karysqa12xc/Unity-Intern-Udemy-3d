@@ -11,9 +11,17 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -2432090755550338912, guid: e618ab8e55a3ed942a408f4d1b7f896e, type: 3}
+    - target: {fileID: 7220393406259998844, guid: 0b9d67eaa0e69b743934b20b7a72de85, type: 3}
+      propertyPath: m_text
+      value: 2, 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7220393406715236433, guid: 0b9d67eaa0e69b743934b20b7a72de85, type: 3}
       propertyPath: m_Name
       value: Tile_RoadStraight
+      objectReference: {fileID: 0}
+    - target: {fileID: 7220393406715236433, guid: 0b9d67eaa0e69b743934b20b7a72de85, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 7220393406715236446, guid: 0b9d67eaa0e69b743934b20b7a72de85, type: 3}
       propertyPath: m_RootOrder

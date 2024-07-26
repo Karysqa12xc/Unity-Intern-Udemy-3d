@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7220393406259998847}
   - component: {fileID: 7220393406259998845}
-  - component: {fileID: 8163481201829128984}
   - component: {fileID: 7220393406259998844}
+  - component: {fileID: 6231982488926251998}
   m_Layer: 0
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -79,18 +79,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8163481201829128984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7220393406259998846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13b6a9e7700b2c845a47f84939b4b9e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7220393406259998844
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -120,8 +108,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4286611584
+  m_fontColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -138,8 +126,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 35.94
+  m_fontSizeBase: 35.94
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -183,6 +171,19 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
+--- !u!114 &6231982488926251998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220393406259998846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b6a9e7700b2c845a47f84939b4b9e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  label: {fileID: 7220393406259998844}
 --- !u!1 &7220393406715236433
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7220393406715236446}
   - component: {fileID: 3369625410111443649}
+  - component: {fileID: 4136133837213347725}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -228,6 +230,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 185dd3d203345f2469fccd643ac078fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tower: {fileID: -7399854652611844681, guid: 792b9b79ff5262747b1d17192216d6e4, type: 3}
+  isPlaceable: 0
+--- !u!65 &4136133837213347725
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220393406715236433}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 0.66, z: 10}
+  m_Center: {x: 0, y: -0.33, z: 0}
 --- !u!1001 &8606474874817978929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -235,6 +252,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7220393406715236446}
     m_Modifications:
+    - target: {fileID: 421719744955806152, guid: 8268644ef66d0e148bce09f9dea8a666, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1466096021428231502, guid: 8268644ef66d0e148bce09f9dea8a666, type: 3}
       propertyPath: m_RootOrder
       value: 1
