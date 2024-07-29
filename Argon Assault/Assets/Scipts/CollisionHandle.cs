@@ -2,14 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+// TODO: Xử lý sự kiện khi va chạm của player
 public class CollisionHandle : MonoBehaviour
 {
     public ParticleSystem explosion;
     void OnCollisionEnter(Collision other)
     {        
-        StartCoroutine(ReloadScene());
+        if(other.gameObject.tag == "Finish"){
+            Invoke("LoadNextScene", 1f);
+        }
+        else if(other.gameObject.tag != "Finish"){
+            StartCoroutine(ReloadScene());
+        }
     }
-
+    // TODO: load lại màn chơi
     private IEnumerator ReloadScene()
     {
         gameObject.GetComponent<MeshRenderer>().enabled = false;
@@ -21,6 +27,7 @@ public class CollisionHandle : MonoBehaviour
         int currentScene = SceneManager.GetActiveScene().buildIndex;
         SceneManager.LoadScene(currentScene);
     }
+    // TODO: chuyển màn nếu người chơi đi đến điểm cuối
     public void LoadNextScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;
@@ -29,9 +36,6 @@ public class CollisionHandle : MonoBehaviour
         {
             nextScene = 0;
         }
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        Debug.Log(other.gameObject.name);
+        SceneManager.LoadScene(nextScene);
     }
 }

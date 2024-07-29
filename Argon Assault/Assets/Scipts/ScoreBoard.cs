@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+// TODO: Tính điểm
 public class ScoreBoard : MonoBehaviour
 {
     public Text scoreTxt;

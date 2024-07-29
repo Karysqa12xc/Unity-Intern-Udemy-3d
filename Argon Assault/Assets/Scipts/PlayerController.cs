@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         ProcessRotation();
         ProcessFiring();
     }
-
+    // TODO: Di chuyển vật thể theo chiều trái phải
     private void ProcessTranslation()
     {
         horizontalThrow = Input.GetAxis("Horizontal");
@@ -53,6 +53,7 @@ public class PlayerController : MonoBehaviour
         transform.localPosition.z
         );
     }
+    // TODO: Xoay vật thể
     public void ProcessRotation()
     {
         float pitch = transform.localPosition.y * positionPitchFactor + verticalThrow;
@@ -60,6 +61,7 @@ public class PlayerController : MonoBehaviour
         float roll = horizontalThrow * positionRollFactor;
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
+    // TODO: Bắn đạn
     public void ProcessFiring()
     {
         
@@ -68,8 +70,6 @@ public class PlayerController : MonoBehaviour
         }else{
             SetLaserActive(false);
         }
-          
-
     }
 
     private void SetLaserActive(bool isActive)

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7246565747272926508}
-  - component: {fileID: 1892824025}
+  - component: {fileID: 1985085981}
   m_Layer: 6
   m_Name: Post Processing
   m_TagString: Untagged
@@ -31,7 +31,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1892824025
+--- !u!114 &1985085981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sharedProfile: {fileID: 11400000, guid: 53fefd3be807a964a9acbdfb780e21cb, type: 2}
+  sharedProfile: {fileID: 11400000, guid: 240d30d5942db1248804a37aecc5f99c, type: 2}
   isGlobal: 1
   blendDistance: 0
   weight: 1

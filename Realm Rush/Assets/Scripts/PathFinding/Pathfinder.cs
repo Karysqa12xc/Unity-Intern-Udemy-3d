@@ -3,14 +3,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-
+// TODO: Triển khai thuật toán BFS
 public class Pathfinder : MonoBehaviour
 {
     //Điểm xuất phát và điểm đích
     [SerializeField] Vector2Int startCoordinates;
     public Vector2Int StartCoordinates { get { return startCoordinates; } }
     [SerializeField] Vector2Int destinationCoordinates;
-    public Vector2Int DestinationCoordinates { get { return destinationCoordinates; } }
+    public Vector2Int DestinationCoordinates
+    {
+        get
+        {
+            return destinationCoordinates;
+        }
+    }
     //Các node lưu trữ các điểm
     Node startNode;
     Node destinationNode;
@@ -34,14 +40,14 @@ public class Pathfinder : MonoBehaviour
             grids = gridManager.Grid;
             startNode = grids[startCoordinates];
             destinationNode = grids[destinationCoordinates];
-           
+
         }
 
     }
     // Start is called before the first frame update
     void Start()
     {
-        
+
         GetNewPath();
     }
 
@@ -87,20 +93,20 @@ public class Pathfinder : MonoBehaviour
     }
     void BreadthFirstSearch(Vector2Int coordinates)
     {
-        startNode.isWalkable  = true;
+        startNode.isWalkable = true;
         destinationNode.isWalkable = true;
         frontier.Clear();
         reached.Clear();
         //Flag điều kiện dừng
         bool isRunning = true;
-        //Khởi tạo Queue
+        //Thêm dữ liệu đầu tiên vao queue
         frontier.Enqueue(grids[coordinates]);
         //Khởi tạo tạo độ đầu tiên đã được check
         reached.Add(coordinates, startNode);
 
         while (frontier.Count > 0 && isRunning)
         {
-            // Lấy tạo độ vừa được thêm vào
+            // Lấy toạ độ vừa được thêm vào
             currentSearchNode = frontier.Dequeue();
             // Chuyển vị trí của toạ độ đó thành màu vàng
             currentSearchNode.isExplored = true;

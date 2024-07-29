@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+// TODO: Nơi lưu trữ dữ liệu toạ độ
 [System.Serializable]
 public class Node
 {

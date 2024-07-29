@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// TODO: Singleton dùng để quản lý Object trong Unity
 public class Singleton<T> : MonoBehaviour where T : Component
 {
     private static T _instance;

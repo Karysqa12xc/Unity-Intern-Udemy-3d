@@ -2,7 +2,7 @@ using System.Diagnostics.Tracing;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// TODO: Tạo chức năng rơi theo thời gian của vật thể
 public class Dropper : MonoBehaviour
 {
     [SerializeField]

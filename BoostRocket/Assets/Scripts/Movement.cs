@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Callbacks;
 using UnityEngine;
-
+// TODO: Di chuyển Rocket
 public class Movement : MonoBehaviour
 {
     private Rigidbody _rb;
@@ -95,6 +95,7 @@ public class Movement : MonoBehaviour
 
     private void StartThrusting()
     {
+        // TODO: Add lực phụ thuộc vào hướng của vật thể
         _rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
         if (!_audioSource.isPlaying)
         {

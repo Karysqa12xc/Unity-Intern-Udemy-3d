@@ -3,28 +3,25 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.InputSystem.WebGL;
-
+// TODO: Xử lý các sự kiện của Enemy
 public class Enemy : MonoBehaviour
 {
     [SerializeField]
-    ParticleSystem deathVFX;
-    AudioSource deathAudio;
+    GameObject deathVFX;
+    public AudioSource deathAudio;
     public GameObject hitVFX;
     public GameObject parent;
     public ScoreBoard scoreBoard;
     public new Collider collider;
-    public bool isDeath = false;
     public int hitPoints = 2;
     void Start()
     {
         
         scoreBoard = GameObject.FindWithTag("Score").GetComponent<ScoreBoard>();
         parent = GameObject.FindWithTag("SpawnPoint");
-        deathVFX = GetComponentInChildren<ParticleSystem>();        
-        deathAudio = GetComponentInChildren<AudioSource>();
+        deathAudio = parent.GetComponent<AudioSource>();
         gameObject.AddComponent<Rigidbody>();
         GetComponent<Rigidbody>().useGravity = false;
-        isDeath = false;
     }
 
     void OnParticleCollision(GameObject other)
@@ -33,26 +30,28 @@ public class Enemy : MonoBehaviour
         ProcessHit();
         if (hitPoints < 1)
         {
+            deathAudio.Play();
             KillEnemy();
         }
     }
 
     private void KillEnemy()
-    {
-        deathVFX.Play();
-        isDeath = true;
+    {        
         collider.enabled = false;
-        gameObject.GetComponent<MeshRenderer>().enabled = false;
-        Destroy(gameObject, 1f);
+        GameObject dvfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        dvfx.transform.parent = parent.transform;
+        Destroy(dvfx, 1f);  
+        Destroy(gameObject);
     }
 
     private void ProcessHit()
     {
-        GameObject vfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
-        vfx.transform.parent = parent.transform;
+        GameObject hvfx = Instantiate(hitVFX, transform.position, Quaternion.identity);
+        hvfx.transform.parent = parent.transform;
+        Destroy(hvfx, 1f);
         hitPoints--;
         if(hitPoints <= 0){
-            deathAudio.Play();
+            
             scoreBoard.IncreaseScore(1);    
         }
     }

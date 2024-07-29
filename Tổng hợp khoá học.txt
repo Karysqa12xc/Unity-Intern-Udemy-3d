@@ -6,7 +6,7 @@ Section 1: Introduction and Setup
 	Giới thiệu về cộng đồng và cách tìm các đường dẫn để fix
 	
 Section 2: Làm game Obstacle
-	Design của game: Camera di chuyển theo Player, Player phải tránh vật thể và đi từ điểm A sang
+	Design của game: Camera di chuyển theo Player, Player phải tránh vật thể để đi từ điểm A sang
 	điểm B
 	Start(): Hàm dùng để khởi tạo các giá trị chỉ chạy duy nhất một lần khi khởi động trò chơi
 	Update(): Hàm lặp chạy nhiều lân dựa trên số khung hình mà máy tính có thể đưa ra
@@ -49,7 +49,7 @@ Section 4: Argom Assault
 	đạn. Camera di chuyển theo rail/path. Các enemies có thể bắn đạn để tấn công người chơi, 
 	Enemie di chuyển hoặc đứng yên. Mỗi khi tiêu diệt Enemy người chơi sẽ được cộng điểm. Khi người
 	chơi bị tiêu diệt thì sẽ quay trở lại điểm bắt đầu và lấy số điểm ao nhất của người hơi
-	Terraim: 
+	Terrain: 
 		Plain Terrain: 
 			Raise of lower terrain tạo vùng địa hình 
 			Set height: Sử dụng chủ yếu để xoá địa hình
@@ -58,7 +58,7 @@ Section 4: Argom Assault
 		một điểm khác để tạo cầu. Lưu ý địa hình phải không bằng phẳng
 		Sculpt/Clone: Tạo bản sao của một địa hình khác
 		Erosion/Wind: Mô phỏng gió thổi qua địa hình 
-		Smooth Height: Làm mịn địa hình
+		Smooth Terrain: Làm mịn địa hình
 		Transform/Pinch: Chỉnh sửa vùng địa hình theo chiều hướng lên
 		Transform/Smudge: Chỉnh sửa vùng địa hình theo chiều hướng xuống
 		Transform/Twist: Chỉnh sửa vùng địa hình theo vòng xoắn
@@ -114,12 +114,13 @@ Section 5: Realm Rush
 	Search Algorithms Overview:
 		Breadth First Search: Luôn trả về đường đi ngắn nhất, có thể có nhiều điểm đầu và điểm đích, 
 		tốc độ ở mức trung binh
-			Duyệt các node trong đường đi theo các chiều các nhau(lên, xuống, trái, phải) để tìm đường đi
+			Duyệt các node trong đường đi theo các chiều khác nhau(lên, xuống, trái, phải) để tìm đường đi
 		Dijkstra: Luôn trả về đường đi ngắn nhất, Tiết kiệm chi phí di chuyển,có thể có nhiều điểm đầu và điểm dích, 
 		tốc độ thuật toán ở mức chậm
 		A*: Có lúc trả về đường đi ngắn nhất có lúc không, Tiết kiệm chi phí di chuyển, có thể có nhiều điểm đầu và điểm 
 		đích, tốc độ thuật toán ở mức nhanh(nhưng trong trường hợp xấu nhất thuật toán này cũng có tốc độ ngang với
-		thuật toán Dijkstra)
+		thuật toán Dijkstra). thuật toán này áp dụng Heuristics để liên tục cái tiến đường đi lên người dùng không 
+		thể dự đoạn được số bước nó cần lặp lại để tìm đường
 	Sử dụng System.Serializable Attribute để hiển thị Class thuần trong Inspector 
 	Dictionary: 
 		Kiểu cấu trúc dữ liệu lưu theo dạng cặp key-values
@@ -132,6 +133,9 @@ Section 5: Realm Rush
 	BroadcastMessage: Chuyền một tên hàm vào điều này giúp cho hàm BroadcastMessage này thực hiện chức năng gọi tất cả các 
 	method có tên được truyền vào BroadcastMessage trong các class kế thức MonoBehavior
 	Vào Project Settings -> Script Execution Order: để sắp xếp tập lệnh
+Section 6: Zombie Runner
+	Desgin Game: Người chơi sử dụng súng để tiêu diệt kẻ địch để lấy điểm và nhặt vật phẩm để bổ sung lực chiến, Camera di
+	di chuyển theo player khi player di chuyển, sử dụng Raycasting để bắn, kẻ đich đuổi theo Enemy khi thấy mục tiêu
 
 	
 

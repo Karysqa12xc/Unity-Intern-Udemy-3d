@@ -25,9 +25,11 @@ public class Mover : MonoBehaviour
     }
     public void MovePlayer()
     {
+        // TODO: Di chuyển vật thể theo position
         float horizontal  = Input.GetAxis("Horizontal");
         float vertical   = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(horizontal, 0, vertical);
+        //? Tương tự transform.Translate()
         transform.position += movement * Time.deltaTime * speed;
     }
 }

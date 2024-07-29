@@ -55,6 +55,7 @@ public class CollisionHandler : MonoBehaviour
                 break;
         }
     }
+    
     public void StartSuccessSequence()
     {
         isTransitioning = true;
@@ -73,6 +74,7 @@ public class CollisionHandler : MonoBehaviour
         GetComponent<Movement>().enabled = false;
         Invoke("ReloadLevel", levelLoadDelay);
     }
+    // TODO: Chơi lại màn hiện tại
     public void ReloadLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -80,6 +82,7 @@ public class CollisionHandler : MonoBehaviour
         SceneManager.LoadScene(currentSceneIndex);
 
     }
+    // TODO: Sang màn tiếp theo nếu chạm vào Finish
     public void LoadNextLevel()
     {
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;

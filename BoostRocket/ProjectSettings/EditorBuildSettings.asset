@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Fly Under.unity
     guid: 216e382089af5af47a5ac396a79a2223
+  - enabled: 1
+    path: Assets/Scenes/Fly Land Moving 1.unity
+    guid: 325d214321351114ba36af99d7e0936b
+  - enabled: 1
+    path: Assets/Scenes/Fly Time Moving obstacle.unity
+    guid: 2046322aea5b7414086d2369ec1a53db
+  - enabled: 1
+    path: Assets/Scenes/Fly Through a gap.unity
+    guid: 0469518b586ab05459804c6c2775cc27
   m_configObjects: {}

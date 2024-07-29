@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+// TODO: Đánh dấu các toạ độ trên map
 public class GridManager : MonoBehaviour
 {
     [SerializeField] Vector2Int gridSize;
