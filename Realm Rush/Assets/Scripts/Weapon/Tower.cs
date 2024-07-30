@@ -11,25 +11,29 @@ public class Tower : MonoBehaviour
     void Start()
     {
         StartCoroutine(Build());
+        
     }
-
     private IEnumerator Build()
     {
-        foreach(Transform child in transform){
+        foreach (Transform child in transform)
+        {
             child.gameObject.SetActive(false);
-            foreach(Transform grandChild in child){
+            foreach (Transform grandChild in child)
+            {
                 grandChild.gameObject.SetActive(false);
             }
         }
-        
-        foreach(Transform child in transform){
+
+        foreach (Transform child in transform)
+        {
             child.gameObject.SetActive(true);
             yield return new WaitForSeconds(buildDelay);
-            foreach(Transform grandChild in child){
+            foreach (Transform grandChild in child)
+            {
                 grandChild.gameObject.SetActive(true);
             }
-        }  
-        
+        }
+
     }
 
     public bool CreateTower(Tower tower, Vector3 position)
@@ -49,6 +53,12 @@ public class Tower : MonoBehaviour
         else
         {
             return false;
+        }
+    }
+    public void HandleDelete(){
+        Bank bank = FindObjectOfType<Bank>();
+        if(bank){
+            bank.Deposit(cost);
         }
     }
 }

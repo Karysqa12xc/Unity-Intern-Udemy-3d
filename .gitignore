@@ -20,6 +20,7 @@
 
 # Ignore auto-generated VS/MD/Consulo solution and project files
 ExportedObj/
+Argon Assault - URP/
 .consulo/
 .vscode/
 .idea/

@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 1728394844344752183}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.3308417, w: 0.9436863}
-  m_LocalPosition: {x: -0.48, y: -0.46, z: 0}
+  m_LocalPosition: {x: -0.422, y: -0.414, z: 0}
   m_LocalScale: {x: 0.5, y: 0.4, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -276,7 +276,7 @@ Transform:
   m_GameObject: {fileID: 3557473036672608954}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: -0.33084375, w: 0.9436856}
-  m_LocalPosition: {x: 0.48, y: -0.46, z: 0.1}
+  m_LocalPosition: {x: 0.417, y: -0.409, z: 0.1}
   m_LocalScale: {x: 0.5, y: 0.4, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -750,7 +750,7 @@ Rigidbody:
   m_GameObject: {fileID: 8269192258018358347}
   serializedVersion: 4
   m_Mass: 0.2
-  m_Drag: 0.25
+  m_Drag: 0
   m_AngularDrag: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
@@ -766,7 +766,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 56
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!82 &5118029340803784319
 AudioSource:
@@ -883,7 +883,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 1.5}
+  m_Size: {x: 1, y: 2, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7277116444608668176
 MonoBehaviour:
@@ -929,7 +929,7 @@ Transform:
   m_GameObject: {fileID: 9073467206730538757}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0.21999931, y: 0.94000006, z: 0.14}
+  m_LocalPosition: {x: 0.016, y: 1.07, z: 0.14}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1279,15 +1279,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.597
+      value: -0.46
       objectReference: {fileID: 0}
     - target: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.728
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.092
+      value: -0.05
       objectReference: {fileID: 0}
     - target: {fileID: 771087676723270698, guid: d4b06ebeeaf0ac044aeed997d98443c2, type: 3}
       propertyPath: m_LocalRotation.w

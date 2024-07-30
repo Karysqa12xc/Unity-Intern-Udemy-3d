@@ -20,17 +20,14 @@ public class Bank : MonoBehaviour
     {
         currentBalance = startingBalance;
         goldCurrent = FindObjectOfType<GoldBoard>();
+        if (goldCurrent)
+            goldCurrent.UpdateGold(currentBalance);
 
     }
     public void Deposit(int amount)
     {
         currentBalance += Mathf.Abs(amount);
         goldCurrent.UpdateGold(currentBalance);
-    }
-    void Start()
-    {
-        if (goldCurrent)
-            goldCurrent.UpdateGold(currentBalance);
     }
     public void Withdraw(int amount)
     {

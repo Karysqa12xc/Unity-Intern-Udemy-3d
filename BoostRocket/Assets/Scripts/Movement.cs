@@ -14,19 +14,17 @@ public class Movement : MonoBehaviour
     public ParticleSystem mainEngineParticle;
     public ParticleSystem leftThrustParticle;
     public ParticleSystem rightThrustParticle;
-    bool isAlive;
-
     // Start is called before the first frame update
     void Start()
     {
         _rb = GetComponent<Rigidbody>();
         _audioSource = GetComponent<AudioSource>();
+        transform.rotation = Quaternion.identity;
     }
 
     // Update is called once per frame
     void Update()
     {
-
         ProcessRotation();
         ProcessThrust();
     }
@@ -46,18 +44,36 @@ public class Movement : MonoBehaviour
         }
     }
 
+    private void UnlockMove()
+    {
+        if (transform.rotation.z == 0)
+        {
+            _rb.constraints = RigidbodyConstraints.FreezePositionX
+            | RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        }
+        else
+        {
+            _rb.constraints = RigidbodyConstraints.None |
+           RigidbodyConstraints.FreezeRotation
+           | RigidbodyConstraints.FreezePositionZ;
+        }
+
+    }
+
     private void StopRotating()
     {
-        if(rightThrustParticle && leftThrustParticle){
+        if (rightThrustParticle && leftThrustParticle)
+        {
             rightThrustParticle.Stop();
             leftThrustParticle.Stop();
-
         }
     }
 
     private void RotateRight()
     {
+
         ApplyRotation(Vector3.back);
+
         if (!rightThrustParticle.isPlaying)
         {
             rightThrustParticle.Play();
@@ -66,6 +82,7 @@ public class Movement : MonoBehaviour
 
     private void RotateLeft()
     {
+        // UnlockMove();
         ApplyRotation(Vector3.forward);
         if (!leftThrustParticle.isPlaying)
         {
@@ -78,6 +95,7 @@ public class Movement : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
+            UnlockMove();
             StartThrusting();
         }
         else
@@ -89,14 +107,15 @@ public class Movement : MonoBehaviour
     private void StopThrusting()
     {
         _audioSource.Stop();
-        if(mainEngineParticle)
+        if (mainEngineParticle)
             mainEngineParticle.Stop();
     }
 
     private void StartThrusting()
     {
         // TODO: Add lực phụ thuộc vào hướng của vật thể
-        _rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime);
+
+        _rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime, ForceMode.Force);
         if (!_audioSource.isPlaying)
         {
             _audioSource.PlayOneShot(mainEngine);
@@ -109,8 +128,6 @@ public class Movement : MonoBehaviour
 
     public void ApplyRotation(Vector3 direction)
     {
-        _rb.freezeRotation = true;
         transform.Rotate(direction * rotationThrust * Time.deltaTime);
-        _rb.freezeRotation = false;
     }
 }

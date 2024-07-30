@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour
     GameObject deathVFX;
     public AudioSource deathAudio;
     public GameObject hitVFX;
+    public GameObject smokeVFX;
     public GameObject parent;
     public ScoreBoard scoreBoard;
     public new Collider collider;
@@ -40,7 +41,10 @@ public class Enemy : MonoBehaviour
         collider.enabled = false;
         GameObject dvfx = Instantiate(deathVFX, transform.position, Quaternion.identity);
         dvfx.transform.parent = parent.transform;
-        Destroy(dvfx, 1f);  
+        GameObject svfs = Instantiate(smokeVFX, transform.position, Quaternion.identity);
+        svfs.transform.parent = parent.transform;
+        Destroy(dvfx, 1f);
+        Destroy(svfs, 3f);
         Destroy(gameObject);
     }
 
@@ -51,7 +55,6 @@ public class Enemy : MonoBehaviour
         Destroy(hvfx, 1f);
         hitPoints--;
         if(hitPoints <= 0){
-            
             scoreBoard.IncreaseScore(1);    
         }
     }

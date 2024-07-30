@@ -40,7 +40,6 @@ public class Pathfinder : MonoBehaviour
             grids = gridManager.Grid;
             startNode = grids[startCoordinates];
             destinationNode = grids[destinationCoordinates];
-
         }
 
     }
@@ -128,7 +127,7 @@ public class Pathfinder : MonoBehaviour
         {
             currentNode = currentNode.connectTo;
             path.Add(currentNode);
-            currentNode.isPath = true;
+            currentNode.isPath = true;            
         }
         path.Reverse();
         return path;

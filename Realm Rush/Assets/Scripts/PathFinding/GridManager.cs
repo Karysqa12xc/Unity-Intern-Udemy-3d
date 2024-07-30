@@ -43,6 +43,13 @@ public class GridManager : MonoBehaviour
             grid[coordinates].isWalkable = false;
         }
     }
+    public void UnlockNode(Vector2Int coordinates)
+    {
+        if (grid.ContainsKey(coordinates))
+        {
+            grid[coordinates].isWalkable = true;
+        }
+    }
     public void ResetNodes()
     {
         foreach (KeyValuePair<Vector2Int, Node> entry in grid)
@@ -57,7 +64,6 @@ public class GridManager : MonoBehaviour
         Vector2Int coordinates = new Vector2Int();
         coordinates.x = Mathf.RoundToInt(position.x / unityGridSize);
         coordinates.y = Mathf.RoundToInt(position.z / unityGridSize);
-
         return coordinates;
     }
     public Vector3 GetPositionFromCoordinates(Vector2Int coordinates)

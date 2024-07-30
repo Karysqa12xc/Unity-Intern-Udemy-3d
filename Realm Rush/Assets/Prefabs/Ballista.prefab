@@ -4814,10 +4814,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3054066483390589031}
   - component: {fileID: 2167824183107073681}
-  - component: {fileID: -7399854652611844681}
+  - component: {fileID: -3460214957204472149}
   m_Layer: 0
   m_Name: Ballista
-  m_TagString: Untagged
+  m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4854,7 +4854,7 @@ MonoBehaviour:
   projectileParticles: {fileID: 0}
   range: 15
   target: {fileID: 0}
---- !u!114 &-7399854652611844681
+--- !u!114 &-3460214957204472149
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
