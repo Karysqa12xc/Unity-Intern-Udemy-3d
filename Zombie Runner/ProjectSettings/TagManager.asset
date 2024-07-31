@@ -4,16 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Interactable
+  - CinemachineTarget
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - EtraFPSUsableItem
+  - 
   - Water
   - UI
-  - UI
-  - Player
+  - Hit
+  - 
   - 
   - 
   - 

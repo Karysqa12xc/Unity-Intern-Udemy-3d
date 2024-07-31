@@ -5,3 +5,4 @@ p4: Làm sao để render tree muộn hơn khi bay cao, làm sao để particle 
 (Chỉnh duration cao và lifetime thấp, cho các hạt chụm vào nhau bằng shape để tạo ra khói), (Chuyển BRP -> URP: tải University Render
 Pipe trong Package Manager => Tạo Render Pipe rồi kéo vào Graphics xong convert) 
 p5: Fix Bug: Không cho đặt hòm vào điểm cuối, fix bug nếu chặn hết tất cả các đường đi thì sẽ không di chuyển được nữa(Đã fix)
+Extra: Tìm hiểu về praticle system, cinemachine camera, post processing, các setting của Terrain 

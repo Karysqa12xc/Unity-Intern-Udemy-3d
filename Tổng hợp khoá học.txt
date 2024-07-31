@@ -135,7 +135,11 @@ Section 5: Realm Rush
 	Vào Project Settings -> Script Execution Order: để sắp xếp tập lệnh
 Section 6: Zombie Runner
 	Desgin Game: Người chơi sử dụng súng để tiêu diệt kẻ địch để lấy điểm và nhặt vật phẩm để bổ sung lực chiến, Camera di
-	di chuyển theo player khi player di chuyển, sử dụng Raycasting để bắn, kẻ đich đuổi theo Enemy khi thấy mục tiêu
+	di chuyển theo player khi player di chuyển, sử dụng Raycasting để bắn, kẻ đich đuổi theo Enemy khi thấy mục tiêu.
+	Sử dụng NavMeshAgent:Đọc docx
+	Sử dụng RayCast: Đọc docx 
+	LayerMask trong RayCast dùng để xác định bắn tia ray vào layer có tên đó, Ví dụ một vật thể có layer là hit thì sễ nhận
+	được hit còn những vật thể khác thì không
 
 	
 
