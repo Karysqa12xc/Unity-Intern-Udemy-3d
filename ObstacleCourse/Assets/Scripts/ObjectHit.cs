@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObjectHit : MonoBehaviour
 {
     MeshRenderer meshRenderer;
+    [SerializeField] bool isTouch = false;
     void Start()
     {
         meshRenderer = GetComponent<MeshRenderer>();
@@ -16,7 +17,14 @@ public class ObjectHit : MonoBehaviour
             * và màu của vật thế
         */
         if (other.gameObject.tag == "Player")
+        {
+            
             gameObject.GetComponent<MeshRenderer>().material.color = Color.red;
+            if(!isTouch){
+                gameObject.transform.position += new Vector3(0, -0.1f, 0);
+                isTouch = true;
+            }
             gameObject.tag = "Hit";
+        }
     }
 }

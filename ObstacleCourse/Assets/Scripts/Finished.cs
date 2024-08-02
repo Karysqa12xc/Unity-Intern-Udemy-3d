@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using Microsoft.Unity.VisualStudio.Editor;
 public class Finished : MonoBehaviour
 {
     public TextMeshProUGUI UITextMeshPro;
@@ -16,6 +17,7 @@ public class Finished : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Player"){
+
             UITextMeshPro.text = "You are finish the game\n" + scorer.Hits;
             Invoke("ReloadGame", 1f);
         }

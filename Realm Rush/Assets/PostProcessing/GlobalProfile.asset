@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-4159877741864066643
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c1cb7e9e120078f43bce4f0b1be547a7, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  mode:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 1.31
+  color:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  ambientOnly:
+    overrideState: 1
+    value: 1
+  noiseFilterTolerance:
+    overrideState: 1
+    value: 0
+  blurTolerance:
+    overrideState: 1
+    value: -4.6
+  upsampleTolerance:
+    overrideState: 1
+    value: -12
+  thicknessModifier:
+    overrideState: 1
+    value: 1.52
+  directLightingStrength:
+    overrideState: 1
+    value: 0
+  radius:
+    overrideState: 1
+    value: 0.25
+  quality:
+    overrideState: 1
+    value: 2
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,6 +65,8 @@ MonoBehaviour:
   - {fileID: 7010313051801612536}
   - {fileID: 1633725572480069483}
   - {fileID: 5571742759239020276}
+  - {fileID: 8387509910820253089}
+  - {fileID: -4159877741864066643}
 --- !u!114 &1633725572480069483
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -31,7 +82,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   gradingMode:
     overrideState: 1
     value: 1
@@ -78,7 +129,7 @@ MonoBehaviour:
     value: {r: 1, g: 1, b: 1, a: 1}
   hueShift:
     overrideState: 1
-    value: -5
+    value: 3
   saturation:
     overrideState: 1
     value: 6
@@ -120,7 +171,7 @@ MonoBehaviour:
     value: 100
   lift:
     overrideState: 1
-    value: {x: 1, y: 1, z: 1, w: 0}
+    value: {x: 1, y: 1, z: 1, w: -0.065789476}
   gamma:
     overrideState: 1
     value: {x: 1, y: 1, z: 1, w: 0}
@@ -768,7 +819,16 @@ MonoBehaviour:
     value:
       curve:
         serializedVersion: 2
-        m_Curve: []
+        m_Curve:
+        - serializedVersion: 3
+          time: 0.5142315
+          value: 0.5
+          inSlope: -2.8158054
+          outSlope: -2.8158054
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -1342,7 +1402,7 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
-    value: 0
+    value: 1
   mode:
     overrideState: 1
     value: 0
@@ -1354,10 +1414,10 @@ MonoBehaviour:
     value: {x: 0.5, y: 0.5}
   intensity:
     overrideState: 1
-    value: 0.28
+    value: 0.394
   smoothness:
     overrideState: 1
-    value: 0.2
+    value: 0.262
   roundness:
     overrideState: 1
     value: 1
@@ -1389,25 +1449,25 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
-    value: 25.4
+    value: 18.07
   threshold:
     overrideState: 1
-    value: 0.6
+    value: 1.4
   softKnee:
     overrideState: 1
-    value: 0.321
+    value: 0.43
   clamp:
     overrideState: 1
-    value: 65435
+    value: 65000
   diffusion:
     overrideState: 1
-    value: 7
+    value: 5.27
   anamorphicRatio:
     overrideState: 1
-    value: 0
+    value: 0.042
   color:
     overrideState: 1
-    value: {r: 0.764151, g: 0.7581197, b: 0.1549929, a: 1}
+    value: {r: 0.9150943, g: 0.904679, b: 0.10791205, a: 1}
   fastMode:
     overrideState: 1
     value: 0
@@ -1418,3 +1478,25 @@ MonoBehaviour:
   dirtIntensity:
     overrideState: 1
     value: 0
+--- !u!114 &8387509910820253089
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  shutterAngle:
+    overrideState: 1
+    value: 129
+  sampleCount:
+    overrideState: 1
+    value: 10

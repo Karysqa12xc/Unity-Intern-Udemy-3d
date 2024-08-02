@@ -19,6 +19,11 @@ Section 2: Làm game Obstacle
 	sinh ra bất kể máy mạnh hay yếu. Ví dụ một máy có thể sinh ra 30 frame/s thì sẽ được tính như
 	sau: 1 * 30 * 1/30 = 1
 	Cinemachine Camera: Di chuyển camera như một máy ảnh điện ảnh
+		CinemachineBrain: Là component để kích hoạt các virtual camera trong scene 
+			Show Debug Text: Hiển thị các thông số của camera trên scene
+			Show camera Frustum: Show UI hiển thị của Camera
+		Cinemachine Virtula Camera: 
+			Solo: Kích hoạt thì sẽ làm cho camera 
 	Basic Collision: Tạo va trạm trong unity(Để có thể nhận hiện tượng va trạm thì cần có Rigibody
 	để tái tạo vật lý
 	Methods: Sử dụng để chia code theo từng chức năng cụ thể
@@ -93,6 +98,7 @@ Section 4: Argom Assault
 		Rotation: Xoay Skybox
 	Lighting => Enviroment => Other Settings => Fog: để tạo sương mù cho trò chơi
 	Post-Processing: Thêm hiệu ứng cho camera để thay đổi góc nhìn trong Game(gồm Process Profile, Process Layer, Process Volume)
+		Ambient Occlusion: 
 Section 5: Realm Rush
 	Game Design: Kiểu game thủ thành người chơi có thể đặt các các cấu trúc phòng thủ và tiêu diệt các enemies trong các lượt
 	tấn công.
@@ -139,7 +145,7 @@ Section 6: Zombie Runner
 	Sử dụng NavMeshAgent:Đọc docx
 	Sử dụng RayCast: Đọc docx 
 	LayerMask trong RayCast dùng để xác định bắn tia ray vào layer có tên đó, Ví dụ một vật thể có layer là hit thì sễ nhận
-	được hit còn những vật thể khác thì không
+	được tia ray còn những vật thể khác thì không
 
 	
 

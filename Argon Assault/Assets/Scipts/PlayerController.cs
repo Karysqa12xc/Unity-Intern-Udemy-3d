@@ -15,16 +15,24 @@ public class PlayerController : MonoBehaviour
     public float yRange = 5f;
     public float positionPitchFactor = -2f;
     public float positionYawFactor = -2f;
-    public float positionRollFactor = -2f;
+    public float positionRollFactor = -2f;    
     [Header("Laser Gun Array")]
     [Tooltip("Add all laser of player")]
     public GameObject[] Lasers;
+    public ParticleSystem Boost;
     // Update is called once per frame
     void Update()
     {
         ProcessTranslation();
         ProcessRotation();
         ProcessFiring();
+        ProcessBoost();
+    }
+    public void ProcessBoost()
+    {
+        if(transform.position.z < 87f){
+            Boost.Play();
+        }
     }
     // TODO: Di chuyển vật thể theo chiều trái phải
     private void ProcessTranslation()

@@ -6801,6 +6801,10 @@ PrefabInstance:
       propertyPath: m_ExposedReferences.m_References.Array.data[3].second
       value: 
       objectReference: {fileID: 1350349893}
+    - target: {fileID: 2301184462573573184, guid: 8d125cbd7040d5945b88af6b7a796c7a, type: 3}
+      propertyPath: Boost
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8d125cbd7040d5945b88af6b7a796c7a, type: 3}
 --- !u!1001 &3066316723557654102
@@ -6815,20 +6819,40 @@ PrefabInstance:
       value: 5000
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
+      propertyPath: m_DrawHeightmap
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_DetailObjectDensity
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
+      propertyPath: m_DrawTreesAndFoliage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
+      propertyPath: m_TreeCrossFadeLength
+      value: 44.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_DetailObjectDistance
-      value: 75.9
+      value: 23.9
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_TreeBillboardDistance
-      value: 433
+      value: 41
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
+      propertyPath: m_BakeLightProbesForTrees
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_TreeMaximumFullLODCount
       value: 2694
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
+      propertyPath: m_DeringLightProbesForTrees
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_PreserveTreePrototypeLayers

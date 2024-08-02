@@ -14,6 +14,7 @@ public class Movement : MonoBehaviour
     public ParticleSystem mainEngineParticle;
     public ParticleSystem leftThrustParticle;
     public ParticleSystem rightThrustParticle;
+    public float maxHeight = 26f;
     // Start is called before the first frame update
     void Start()
     {
@@ -114,8 +115,10 @@ public class Movement : MonoBehaviour
     private void StartThrusting()
     {
         // TODO: Add lực phụ thuộc vào hướng của vật thể
-
-        _rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime, ForceMode.Force);
+        Debug.Log(transform.position.y);
+        if(transform.position.y <= maxHeight){
+            _rb.AddRelativeForce(Vector3.up * mainThrust * Time.deltaTime, ForceMode.Force);
+        }
         if (!_audioSource.isPlaying)
         {
             _audioSource.PlayOneShot(mainEngine);

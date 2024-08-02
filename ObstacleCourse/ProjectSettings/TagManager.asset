@@ -7,6 +7,7 @@ TagManager:
   - Wall
   - Hit
   - UI
+  - TopLayer
   layers:
   - Default
   - TransparentFX
@@ -14,8 +15,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - TopLayer
+  - PostProcessing
   - 
   - 
   - 

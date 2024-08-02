@@ -1910,6 +1910,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3199216920632024028, guid: c238b4a04f7c957478e380161851c068, type: 3}
+      propertyPath: maxHeight
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 8269192258018358347, guid: c238b4a04f7c957478e380161851c068, type: 3}
       propertyPath: m_Name
       value: Rocket
