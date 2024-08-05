@@ -6496,7 +6496,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 1
+    enabled: 0
     mode: 0
     timeMode: 0
     fps: 30
@@ -7835,7 +7835,7 @@ ParticleSystem:
     strength:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 11.58
+      scalar: 13
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -7992,7 +7992,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     separateAxes: 0
-    frequency: 2.14
+    frequency: 1.51
     damping: 1
     octaves: 1
     octaveMultiplier: 0.5

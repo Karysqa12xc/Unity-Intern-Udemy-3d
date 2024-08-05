@@ -6832,7 +6832,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_TreeCrossFadeLength
-      value: 44.1
+      value: 79.1
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_DetailObjectDistance
@@ -6840,7 +6840,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_TreeBillboardDistance
-      value: 41
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_BakeLightProbesForTrees
@@ -6848,7 +6848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_TreeMaximumFullLODCount
-      value: 2694
+      value: 1853
       objectReference: {fileID: 0}
     - target: {fileID: 3066316723593708058, guid: 280f1626f8a5c524cbbfa71ec460de9a, type: 3}
       propertyPath: m_DeringLightProbesForTrees
