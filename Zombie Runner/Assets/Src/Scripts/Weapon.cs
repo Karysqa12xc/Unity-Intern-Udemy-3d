@@ -25,9 +25,19 @@ public class Weapon : MonoBehaviour
         {
             Shoot();
             Recoil();
+            HandlerBolt(true);
+        }else{
+            HandlerBolt(false);
         }
         Debug.DrawRay(FPCamera.transform.position, FPCamera.transform.forward * range, Color.red);
     }
+
+    private void HandlerBolt(bool isFire)
+    {
+        transform.GetChild(0)
+            .GetComponent<Animator>().SetBool("IsRecoil", isFire);   
+    }
+
     private void Shoot()
     {
         PlayEffect();
