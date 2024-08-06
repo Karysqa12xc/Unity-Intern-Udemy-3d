@@ -13,17 +13,28 @@ public class Weapon : MonoBehaviour
     [SerializeField] ParticleSystem rayFireVfx;
     [SerializeField] float minRandom = -20f;
     [SerializeField] float maxRandom = -10f;
+    [SerializeField] Ammo ammoSlot;
+    [SerializeField] AmmoType ammoType;
+    [SerializeField] float timeBetweenShot = 0.5f;
+    GameObject player;
+    bool canShoot = true;
     void Start()
     {
         parent = GameObject.FindWithTag("Spawn").transform;
+        player = GameObject.FindWithTag("CinemachineTarget");
         rayFireVfx = GameObject.Find("Ray").GetComponent<ParticleSystem>();
+    }
+    void OnEnable()
+    {
+        canShoot = true;
     }
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        if (Input.GetMouseButton(0) && ammoSlot.GetCurrentAmount(ammoType) > 0
+            && canShoot)
         {
-            Shoot();
+            StartCoroutine(Shoot());
             Recoil();
             HandlerBolt(true);
         }else{
@@ -38,10 +49,14 @@ public class Weapon : MonoBehaviour
             .GetComponent<Animator>().SetBool("IsRecoil", isFire);   
     }
 
-    private void Shoot()
+    private IEnumerator Shoot()
     {
+        canShoot = false;
         PlayEffect();
         ProcessRayCast();
+        ammoSlot.ReduceCurrentAmmo(ammoType);
+        yield return new WaitForSeconds(timeBetweenShot);
+        canShoot = true;
     }
 
     private void PlayEffect()
@@ -80,8 +95,7 @@ public class Weapon : MonoBehaviour
     public void Recoil()
     {
         float RandomX = Random.Range(minRandom, maxRandom);
-        GameObject player = GameObject.FindWithTag("CinemachineTarget");
         Quaternion randomRotation = Quaternion.Euler(RandomX, 0, 0);
-        player.transform.rotation *= randomRotation;
+        player.transform.rotation *= randomRotation ;
     }
 }
