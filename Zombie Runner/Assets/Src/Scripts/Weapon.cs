@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class Weapon : MonoBehaviour
@@ -16,6 +17,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] Ammo ammoSlot;
     [SerializeField] AmmoType ammoType;
     [SerializeField] float timeBetweenShot = 0.5f;
+    [SerializeField] TextMeshProUGUI ammoText;
     GameObject player;
     bool canShoot = true;
     void Start()
@@ -40,9 +42,14 @@ public class Weapon : MonoBehaviour
         }else{
             HandlerBolt(false);
         }
+        DisplayAmmo();
         Debug.DrawRay(FPCamera.transform.position, FPCamera.transform.forward * range, Color.red);
     }
-
+    private void DisplayAmmo()
+    {
+        int currentAmmo = ammoSlot.GetCurrentAmount(ammoType);
+        ammoText.text = currentAmmo.ToString();
+    }
     private void HandlerBolt(bool isFire)
     {
         transform.GetChild(0)

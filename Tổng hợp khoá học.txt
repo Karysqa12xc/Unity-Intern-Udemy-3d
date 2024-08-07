@@ -146,6 +146,7 @@ Section 6: Zombie Runner
 	Sử dụng RayCast: Đọc docx 
 	LayerMask trong RayCast dùng để xác định bắn tia ray vào layer có tên đó, Ví dụ một vật thể có layer là hit thì sễ nhận
 	được tia ray còn những vật thể khác thì không
+	Probuilder: phần mềm dùng để xây dựng các model 
 
 	
 
