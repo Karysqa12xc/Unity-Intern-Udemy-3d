@@ -26,6 +26,7 @@ public class EnemyHealth : MonoBehaviour
         if (hitPoints <= 0)
         {
             Die();
+            
             Destroy(gameObject, 1.5f);
         }
     }
@@ -33,6 +34,8 @@ public class EnemyHealth : MonoBehaviour
     {
         if(_isDeath) return;
         _isDeath = true;
+        FindObjectOfType<ScoreBoard>().IncreaseScore(1);
         GetComponent<Animator>().SetTrigger("die");
+        GetComponent<CapsuleCollider>().enabled = false;
     }
 }

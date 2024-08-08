@@ -5,7 +5,7 @@ using UnityEngine;
 public class BatteryPickup : MonoBehaviour
 {
     [SerializeField] float restoreAngle = 90f;
-    [SerializeField] float addIntensity = 1f;
+    [SerializeField] float addIntensity = 2f;
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player"){

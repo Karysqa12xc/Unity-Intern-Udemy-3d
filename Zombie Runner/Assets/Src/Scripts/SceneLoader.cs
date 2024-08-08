@@ -4,11 +4,6 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class SceneLoader : MonoBehaviour
 {
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ReloadScene()
     {
         int currentScene = SceneManager.GetActiveScene().buildIndex;   
@@ -19,5 +14,18 @@ public class SceneLoader : MonoBehaviour
     public void ExitScene()
     {
         Application.Quit();
+    }
+    public void NextScene(){
+        int nextMap =  SceneManager.GetActiveScene().buildIndex + 1;
+        if(nextMap != SceneManager.sceneCount){
+            nextMap = 0;
+        }
+        SceneManager.LoadScene(nextMap);
+    }
+    public void LoadChooseScene(int index)
+    {
+        SceneManager.LoadScene(index);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = true;
     }
 }

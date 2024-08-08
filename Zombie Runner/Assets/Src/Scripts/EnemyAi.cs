@@ -13,12 +13,14 @@ public class EnemyAi : MonoBehaviour
     float distanceToTarget = Mathf.Infinity;
     [SerializeField] bool isProvoked = false;
     [SerializeField] EnemyHealth enemyHealth;
+    [SerializeField] AudioSource audioSource;
     public float turnSpeed = 1f;
     // Start is called before the first frame update
     void Start()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         enemyHealth = GetComponent<EnemyHealth>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -48,7 +50,9 @@ public class EnemyAi : MonoBehaviour
         if (distanceToTarget >= navMeshAgent.stoppingDistance)
         {
             ChaseTarget();
-
+            if(!audioSource.isPlaying){
+                audioSource.Play();
+            }
         }
         if (distanceToTarget <= navMeshAgent.stoppingDistance)
         {

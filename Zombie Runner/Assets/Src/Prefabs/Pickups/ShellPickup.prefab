@@ -8,7 +8,23 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 357039319849286098, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 357039319849286098, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1394825702564911686, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355282998331930461, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3355282998331930461, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
@@ -71,6 +87,14 @@ PrefabInstance:
     - target: {fileID: 4746856485622198700, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
       propertyPath: m_Name
       value: ShellPickup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793543940562098728, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4793543940562098728, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5654626380512590530, guid: a1b74f75b3021c34aabfe1f6b6bbee27, type: 3}
       propertyPath: m_VersionIndex

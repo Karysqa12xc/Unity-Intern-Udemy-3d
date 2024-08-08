@@ -18,6 +18,9 @@ public class Weapon : MonoBehaviour
     [SerializeField] AmmoType ammoType;
     [SerializeField] float timeBetweenShot = 0.5f;
     [SerializeField] TextMeshProUGUI ammoText;
+    [SerializeField] AudioSource shootSound;
+    [SerializeField] AudioClip shootClip;
+    [SerializeField] FlashLightSystem flashLightSystem;
     GameObject player;
     bool canShoot = true;
     void Start()
@@ -25,6 +28,7 @@ public class Weapon : MonoBehaviour
         parent = GameObject.FindWithTag("Spawn").transform;
         player = GameObject.FindWithTag("CinemachineTarget");
         rayFireVfx = GameObject.Find("Ray").GetComponent<ParticleSystem>();
+        shootSound = GetComponentInParent<AudioSource>();
     }
     void OnEnable()
     {
@@ -39,7 +43,10 @@ public class Weapon : MonoBehaviour
             StartCoroutine(Shoot());
             Recoil();
             HandlerBolt(true);
-        }else{
+            shootSound.PlayOneShot(shootClip);
+        }
+        else
+        {
             HandlerBolt(false);
         }
         DisplayAmmo();
@@ -53,7 +60,7 @@ public class Weapon : MonoBehaviour
     private void HandlerBolt(bool isFire)
     {
         transform.GetChild(0)
-            .GetComponent<Animator>().SetBool("IsRecoil", isFire);   
+            .GetComponent<Animator>().SetBool("IsRecoil", isFire);
     }
 
     private IEnumerator Shoot()
@@ -61,6 +68,10 @@ public class Weapon : MonoBehaviour
         canShoot = false;
         PlayEffect();
         ProcessRayCast();
+        if (flashLightSystem.MyLight.intensity < 10)
+        {
+            flashLightSystem.RestoreLightIntensity(1);
+        }
         ammoSlot.ReduceCurrentAmmo(ammoType);
         yield return new WaitForSeconds(timeBetweenShot);
         canShoot = true;
@@ -103,6 +114,6 @@ public class Weapon : MonoBehaviour
     {
         float RandomX = Random.Range(minRandom, maxRandom);
         Quaternion randomRotation = Quaternion.Euler(RandomX, 0, 0);
-        player.transform.rotation *= randomRotation ;
+        player.transform.rotation *= randomRotation;
     }
 }

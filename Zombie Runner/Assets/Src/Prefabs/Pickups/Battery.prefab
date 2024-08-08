@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 564846302410848794}
   - component: {fileID: 8687948241196024734}
+  - component: {fileID: 4912713003055063819}
   m_Layer: 0
   m_Name: Battery
   m_TagString: Untagged
@@ -54,6 +55,20 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4912713003055063819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880453356641814697}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45a6e8d215c46784ea75a2eaa1f93d36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  restoreAngle: 90
+  addIntensity: 10
 --- !u!1 &3853195297325552874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1700,7 +1715,7 @@ MonoBehaviour:
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
   m_Mesh: {fileID: 0}
-  m_VersionIndex: 1437
+  m_VersionIndex: 1440
   m_IsSelectable: 1
   m_SelectedFaces: 
   m_SelectedEdges: []
