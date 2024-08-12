@@ -21,6 +21,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] AudioSource shootSound;
     [SerializeField] AudioClip shootClip;
     [SerializeField] FlashLightSystem flashLightSystem;
+    [SerializeField] float intensityLight = 1f;
     GameObject player;
     bool canShoot = true;
     void Start()
@@ -70,7 +71,7 @@ public class Weapon : MonoBehaviour
         ProcessRayCast();
         if (flashLightSystem.MyLight.intensity < 10)
         {
-            flashLightSystem.RestoreLightIntensity(1);
+            flashLightSystem.RestoreLightIntensity(intensityLight);
         }
         ammoSlot.ReduceCurrentAmmo(ammoType);
         yield return new WaitForSeconds(timeBetweenShot);
@@ -101,6 +102,11 @@ public class Weapon : MonoBehaviour
                 if (target)
                 {
                     target.TakeDamage(damage);
+                }
+                if(hit.collider.CompareTag("Spawn"))
+                {
+                    FindObjectOfType<WarmUpStart>().spawnedObjects.Remove(hit.collider.gameObject);
+                    Destroy(hit.collider.gameObject);
                 }
             }
         }

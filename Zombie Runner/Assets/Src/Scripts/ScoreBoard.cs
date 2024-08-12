@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -7,8 +8,18 @@ public class ScoreBoard : MonoBehaviour
 {
     [SerializeField] TextMeshProUGUI scoreTxt;
     [Range(0, 100)]
-
     [SerializeField] int ScorePoint = 0;
+    public int ScoreCheck
+    {
+        get
+        {
+            return ScorePoint;
+        }
+        private set
+        {
+            ScorePoint = value;
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {

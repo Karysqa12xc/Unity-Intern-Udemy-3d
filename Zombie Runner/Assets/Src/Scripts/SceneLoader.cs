@@ -13,11 +13,13 @@ public class SceneLoader : MonoBehaviour
     }
     public void ExitScene()
     {
-        Application.Quit();
+        SceneManager.LoadScene(0);
+        Time.timeScale = 0;
+        Cursor.lockState = CursorLockMode.None;  
     }
     public void NextScene(){
         int nextMap =  SceneManager.GetActiveScene().buildIndex + 1;
-        if(nextMap != SceneManager.sceneCount){
+        if(nextMap == SceneManager.sceneCountInBuildSettings){
             nextMap = 0;
         }
         SceneManager.LoadScene(nextMap);
@@ -25,6 +27,7 @@ public class SceneLoader : MonoBehaviour
     public void LoadChooseScene(int index)
     {
         SceneManager.LoadScene(index);
+        Time.timeScale = 1;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = true;
     }
